@@ -24,8 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        Salom Dunyo
+      <div className='container'>
+      <h1 className='heading'>
+        movies
       </h1>
 
       <select onChange={e => setLimit(e.target.value)}>
@@ -65,7 +66,7 @@ function App() {
           {
             paginationArr.length > 0 && paginationArr?.map(e => {
               return(
-                <button style={{border: page == e ? "3px solid black" : "none"}} key={e} id={e} onClick={e => setPage(e.target.id)}> 
+                <button style={{border: page == e ? "3px solid red" : "1px solid black"}} key={e} id={e} onClick={e => setPage(e.target.id)}> 
                   {e}
                 </button>
               )
@@ -73,6 +74,7 @@ function App() {
           }
 
         </div>
+      </div>
     </div>
   );
 }
